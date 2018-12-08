@@ -31,13 +31,13 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         this.context = this;
-        alarmTime = (TimePicker) findViewById(R.id.timePicker);
+        alarmTime = findViewById(R.id.timePicker);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         final Calendar calendar = Calendar.getInstance();
         final Intent intent = new Intent(this.context, alarmReciever.class);
 
-        Button set = (Button) findViewById(R.id.setAlarm);
-        Button end = (Button) findViewById(R.id.endAlarm);
+        Button set = findViewById(R.id.setAlarm);
+        Button end = findViewById(R.id.endAlarm);
 
         set.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.M)
